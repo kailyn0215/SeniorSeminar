@@ -10,8 +10,9 @@ Info:
 - if cutting a session there must be a good reason
 
 Plan:
-- Start by creating array list of the student names, emails, the time they filled out the survey, along w/ their list + priority
-- Create list with session names, ids, and presenters
-- Rearrange student priority based on the time they filled out the survey/if they filled out the survey (maybe do this outside of the code)
+- Start by creating array list of the student names, emails, the time they filled out the survey, along w/ their list + priority (with remade excel sheet)
+- Create list with session names, ids, and presenters (with separate excel sheet)
+- Rearrange student priority based on the time they filled out the survey/if they filled out the survey (do this outside of the code)
 - use 2x2 array (like battleship) for classrooms and time slots
-- (possibly) go down the list of their first choices and assign based off of that then continue for 2nd 3rd etc...
+- (possibly) go down the list of their first choices and assign based off of that then continue for 2nd 3rd etc... - not sure abt this yet bc im not sure how it will turn out
+- while going down the list keep track of which ones are most popular/least popular + which ones need a second session (at least 7 i think)
