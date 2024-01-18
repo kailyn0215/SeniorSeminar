@@ -29,6 +29,6 @@ time: 1, 2, 3, 4, 5
 rooms:
 1 --- 1, 2, 3, 4, 5
 2 --- 6, 7, 8, 9, 10
-
+(i am now realizing that this is not formatting the way i want it to)
 maybe more of a change for people to get their top choices since the popular ones wont all be in timeslot 1?
 
