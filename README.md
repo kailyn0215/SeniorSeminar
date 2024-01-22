@@ -32,3 +32,7 @@ rooms:
 (i am now realizing that this is not formatting the way i want it to)
 maybe more of a change for people to get their top choices since the popular ones wont all be in timeslot 1?
 
+1/22 update:
+fixed some issues with the student excel sheet
+finished reading both files
+able to read off the list of people or sessions
