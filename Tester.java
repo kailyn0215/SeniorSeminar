@@ -68,20 +68,12 @@ public class Tester {
                 studentList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5));
                 count++;
             }
-            System.out.println("Finished student try catch for a total of " + (count) + " sessions.");
+            System.out.println("Finished student try catch for a total of " + (count) + " students.");
             stuScanner.close();
         } 
         catch (FileNotFoundException e) {
             System.out.println("Uh oh! It looks like one of the files hasn't been loaded in! Please load 'SeniorSeminarStudents.xlsx - SrSeminar_RawData.csv' into the program.");
             e.printStackTrace();
         }
-
-        /*try {
-            File students = new File("SeniorSeminarStudent.xlsx - Sheet1.csv");
-        }
-        catch (FileNotFoundException e) {
-            System.out.println("Uh oh! It looks like one of the files hasn't been loaded in! Please load 'SeniorSeminarSessions.xlsx - Sheet1.csv' into the program.");
-            e.printStackTrace();
-        }*/
     }
 }
