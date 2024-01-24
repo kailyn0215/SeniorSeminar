@@ -36,3 +36,4 @@ maybe more of a change for people to get their top choices since the popular one
 fixed some issues with the student excel sheet
 finished reading both files
 able to read off the list of people or sessions
+yay!!!
