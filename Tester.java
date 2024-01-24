@@ -5,6 +5,7 @@ import java.util.*;
 public class Tester {
     public static void main(String[] args) {
         ArrayList<Student> studentList = new ArrayList<Student>();
+        ArrayList<Student> unassignedList = new ArrayList<Student>();
         ArrayList<Session> sessionList = new ArrayList<Session>();
         int[] seshPopularity = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         
@@ -47,10 +48,10 @@ public class Tester {
                 seshPopularity[choice5] = seshPopularity[choice5] + 1;
 
                 if(choice1 > 0) {
-                    studentList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5));
+                    studentList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5)); // if they made any choices
                 }
                 else {
-                    
+                    unassignedList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5)); // if they didnt make any choices
                 }
                 
                 count++;
