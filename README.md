@@ -42,4 +42,3 @@ yay!!!
 made get/set functions in both student + sessions files
 brainstormed on how to schedule the different sessions
 worked on sorting the most popular sessions to make a 2nd iteration of them (need to keep working on this and integrating removing the smallest sessions to create more room for more popular sessions)
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fbluemoji.io%2F&psig=AOvVaw12o6Ck2SMF8ZfyThD7s9j6&ust=1706378914041000&source=images&cd=vfe&opi=89978449&ved=0CBUQjhxqFwoTCKCGmfvS-4MDFQAAAAAdAAAAABAD
