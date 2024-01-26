@@ -37,3 +37,8 @@ fixed some issues with the student excel sheet
 finished reading both files
 able to read off the list of people or sessions
 yay!!!
+
+1/26 update:
+made get/set functions in both student + sessions files
+brainstormed on how to schedule the different sessions
+worked on sorting the most popular sessions to make a 2nd iteration of them (need to keep working on this and integrating removing the smallest sessions to create more room for more popular sessions)
