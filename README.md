@@ -38,6 +38,10 @@ finished reading both files
 able to read off the list of people or sessions
 yay!!!
 
+2/1 update:
+got a list organized based off of the popularity of the sessions
+planning on using this list of ids to create the table of sessions (need to come up with a plan for this </3)
+
 1/26 update:
 made get/set functions in both student + sessions files
 brainstormed on how to schedule the different sessions
