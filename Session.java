@@ -4,13 +4,18 @@ public class Session {
     private int id;
     private String proctor;
     private int popularity;
+    private int people;
 
-    public Session(String seshName, int seshId, String seshProctor, int seshPop) {
+    public Session(String seshName, int seshId, String seshProctor, int seshPop, int seshPeople) {
         name = seshName;
         id = seshId;
         proctor = seshProctor;
         popularity = seshPop;
-        System.out.println("Added " + name + ", ID: " + id + ", Proctored by " + proctor);
+        //System.out.println("Added " + name + ", ID: " + id + ", Proctored by " + proctor);
+    }
+
+    public Session(int seshId) {
+        id = seshId;
     }
 
     public String getName() {

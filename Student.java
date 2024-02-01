@@ -15,8 +15,7 @@ public class Student {
         choices[2] = stuChoice3;
         choices[3] = stuChoice4;
         choices[4] = stuChoice5;
-
-        System.out.println("Added " + name + " to the roster.");
+        //System.out.println("Added " + name + " to the roster.");
     }
 
     public String getName() {
