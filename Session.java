@@ -6,11 +6,11 @@ public class Session {
     private int popularity;
     private int people;
 
-    public Session(String seshName, int seshId, String seshProctor, int seshPop, int seshPeople) {
+    public Session(String seshName, int seshId, String seshProctor, int seshPopularity) {
         name = seshName;
         id = seshId;
         proctor = seshProctor;
-        popularity = seshPop;
+        popularity = seshPopularity;
         //System.out.println("Added " + name + ", ID: " + id + ", Proctored by " + proctor);
     }
 
@@ -24,6 +24,10 @@ public class Session {
 
     public String getProctor() {
         return proctor;
+    }
+
+    public void setPopularity(int pop) {
+        popularity = pop;
     }
 
     public int getPopularity() {

@@ -9,9 +9,13 @@ public class Tester {
         ArrayList<Session> sessionList = new ArrayList<Session>();
         //ArrayList<Session> organizedList = new ArrayList<Session>(); // maybe want to change this into integers to simplify?
         ArrayList<Integer> organizedList = new ArrayList<Integer>();
+        int[][] seshGrid = {
+            {0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0},
+        };
         int[] seshPopularity = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // the popularity of each session (graded based on # in peoples choices)
         int[] seshPeople = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // how many people wanted this in their top 5 choices
-        boolean[] seshDouble = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}; // true if session is in top 7 (meaning they get a second )
+        boolean[] notDone = {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
         int[] topSesh = {0, 0, 0, 0, 0, 0, 0}; //top 7 sessions
         int temp = 0;
  
@@ -60,6 +64,14 @@ public class Tester {
 
                 if(choice1 > 0) {
                     studentList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5)); // if they made any choices
+                    for(int i = 0; i < 5; i++) {
+                        for(int o = 0; o < 5; o++) {
+                            while(seshGrid[i][o] == 0 && !notDone[choice1]) {
+                                seshGrid[i][o] = choice1;
+                                notDone[choice1] = true;
+                            }
+                        }
+                    }
                 }
                 else {
                     unassignedList.add(new Student(tempTime, tempName, tempUser, choice1, choice2, choice3, choice4, choice5)); // if they didnt make any choices NEED TO IMPLEMENT PUTTING THEM INTO THE LIST @ THE END
@@ -87,7 +99,7 @@ public class Tester {
                 tempName = currentSession[0];
                 tempId = Integer.parseInt(currentSession[1]);
                 tempProctor = currentSession[2];
-                sessionList.add(new Session(tempName, tempId, tempProctor, seshPopularity[tempId], seshPeople[tempId])); // need to add something to get rid of something with little popularity (session 4 haha)
+                sessionList.add(new Session(tempName, tempId, tempProctor, seshPopularity)); // need to add something to get rid of something with little popularity (session 4 haha)
                 count++;
             }
             //System.out.println("Finished session try catch for a total of " + (count) + " sessions.");
