@@ -207,15 +207,22 @@ public class Tester {
 
         if(inp == 1) {
             String userName = in.nextLine();
+            boolean found = false;
             for(int x = 0; x < studentList.size(); x++) {
                 if(studentList.get(x).getName() == userName) {
                     studentList.get(x).print();
+                    found = true;
+                    //need to continue to see if it works
+                }
+                else if(!found) {
+                    System.out.println("Looks like " + userName + " couldn't be found.");
+                    break;
                 }
             }
         }
         else if(inp == 2) {
             int sessionID = Integer.parseInt(in.nextLine());
-            
+            // need to continue w printing this
         }
 
 
