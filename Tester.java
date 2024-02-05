@@ -107,7 +107,7 @@ public class Tester {
                     organizedList.add(o, i); // adds the id of the session at the organized spot
                     System.out.println("Session ID " + i + " placed in spot " + o);
                     alrDone = true;
-                    break; // hopefully breaks out of o loop?
+                    break; // hopefully breaks out of placement loop?
                 } 
             }
             if(!alrDone) {
@@ -116,8 +116,13 @@ public class Tester {
             }
         }
 
-        /* for(int e = 0; e < organizedList.size(); e++) {
-            System.out.println(organizedList.get(e));
-        } */
+        for(int x = 0; x < 7; x++) {
+            topSesh[x] = organizedList.get(x); //makes the top 7 sessions have their own places
+        }
+
+        for(int a = 6; a >= 0; a--) { //max # of 7 extra sessions
+            organizedList.add(a, topSesh[a]);
+            System.out.println("Added " + topSesh[a] + " to spot " + a);
+        }
     }
 }
