@@ -17,3 +17,5 @@ Plan:
 - (possibly) go down the list of their first choices and assign based off of that then continue for 2nd 3rd etc... - not sure abt this yet bc im not sure how it will turn out
 - while going down the list keep track of which ones are most popular/least popular (points system 5 pts for first choice, 1 pt for last, etc) + which ones need a second session (at least 7 i think)
 - maybe array thing of rooms & times?
+
+idea: maybe create time slots based on popularity, run thru all of them and create point tally for popularity, create 2nd session based off of the most popular
