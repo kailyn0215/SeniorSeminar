@@ -18,4 +18,35 @@ Plan:
 - while going down the list keep track of which ones are most popular/least popular (points system 5 pts for first choice, 1 pt for last, etc) + which ones need a second session (at least 7 i think)
 - maybe array thing of rooms & times?
 
+<<<<<<< HEAD
 idea: maybe create time slots based on popularity, run thru all of them and create point tally for popularity, create 2nd session based off of the most popular
+=======
+1/18 update:
+figured out how to read the excel files (i know its dumb)
+got the try catch for sessions working + printing the session names, ids, and proctors
+started the try catch for students
+added to the session.java file to get the sessions to work (added variables etc)
+added some variables to tester as well in order to get try catch working
+also thought about how to optimize the students choices, maybe go to the side based on popularity? ex:
+time: 1, 2, 3, 4, 5
+rooms:
+1 --- 1, 2, 3, 4, 5
+2 --- 6, 7, 8, 9, 10
+(i am now realizing that this is not formatting the way i want it to)
+maybe more of a change for people to get their top choices since the popular ones wont all be in timeslot 1?
+
+1/22 update:
+fixed some issues with the student excel sheet
+finished reading both files
+able to read off the list of people or sessions
+yay!!!
+
+2/1 update:
+got a list organized based off of the popularity of the sessions
+planning on using this list of ids to create the table of sessions (need to come up with a plan for this </3)
+
+1/26 update:
+made get/set functions in both student + sessions files
+brainstormed on how to schedule the different sessions
+worked on sorting the most popular sessions to make a 2nd iteration of them (need to keep working on this and integrating removing the smallest sessions to create more room for more popular sessions)
+>>>>>>> 16ff64ec14b794494673ba56ec5d49878eea9a21
