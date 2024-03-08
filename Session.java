@@ -58,7 +58,9 @@ public class Session {
     }
 
     public void printStudents() {
-
+        for(int i = 0; i < students.size(); i++) {
+            System.out.println(students.get(i));
+        }  
     }
 
     public boolean getDoubleSession() {
@@ -82,6 +84,9 @@ public class Session {
     }
 
     public void printStudents2() {
-        
+        for(int i = 0; i < students2.size(); i++) {
+            System.out.println(students2.get(i));
+        } 
     }
+
 }
