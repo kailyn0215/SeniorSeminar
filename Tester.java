@@ -9,7 +9,7 @@ public class Tester {
         ArrayList<Session> sessionList = new ArrayList<Session>();
         //ArrayList<Session> organizedList = new ArrayList<Session>(); // maybe want to change this into integers to simplify?
         ArrayList<Integer> organizedList = new ArrayList<Integer>();
-        int[][] seshGrid = {
+        int[][] seshGrid = { //cols r rooms. 
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0},
@@ -168,13 +168,14 @@ public class Tester {
         }
 
         for(int r = 0; r < 5; r++) {
+            System.out.print("Time slot " + (r + 1) + ": ");
             for(int c = 0; c < 5; c++) {
                 System.out.print(seshGrid[r][c] + " ");
             }
             System.out.print("\n");
         }
 
-        for(Student stu : studentList) {
+        /*for(Student stu : studentList) {
         //for(int u = 0; u < studentList.size(); u++) {
             choice[0] = stu.getChoice1();
             choice[1] = stu.getChoice2();
@@ -201,31 +202,68 @@ public class Tester {
             }
             stu.print();
             
-        }
+        } */
 
-        System.out.println("Welcome to Senior Seminar! Would you like to 1- Search by student, 2- Search by Session ID, 3- Print all of the students");
-        Scanner in = new Scanner(System.in);
-        int inp = Integer.parseInt(in.nextLine());
+        for(Student stu : studentList) {
+            choice[0] = stu.getChoice1();
+            choice[1] = stu.getChoice2();
+            choice[2] = stu.getChoice3();
+            choice[3] = stu.getChoice4();
+            choice[4] = stu.getChoice5();
 
-        if(inp == 1) {
-            String userName = in.nextLine();
-            boolean found = false;
-            for(int x = 0; x < studentList.size(); x++) {
-                if(studentList.get(x).getName() == userName) {
-                    studentList.get(x).print();
-                    found = true;
-                    //need to continue to see if it works
-                }
-                else if(!found) {
-                    System.out.println("Looks like " + userName + " couldn't be found.");
-                    break;
+            for(int t = 0; t < 5; t++) { // for each time slot
+                for(int r = 0; r < 5; r++) { // each room
+                    for(int i = 0; i < 5; i++) { // each choice
+                        if(seshGrid[t][r] == choice[i] && sessionList.get(choice[i]).getPeople() < 16) {
+                            sessionList.get(choice[i]).setPeople();
+                            sessionList.get(choice[i]).setStudents(stu.getId());
+                        }
+                    } 
                 }
             }
         }
-        else if(inp == 2) {
-            int sessionID = Integer.parseInt(in.nextLine());
-            // need to continue w printing this
+
+        System.out.println("Welcome to Senior Seminar!");
+        while(true) {
+            System.out.println("Would you like to 1- Search by student, 2- Search by Session ID, 3- Print all of the students");
+            Scanner in = new Scanner(System.in);
+            int inp = Integer.parseInt(in.nextLine());
+
+            if(inp == 1) { // NOT WORKING
+                System.out.println("Please enter the students USERNAME: ");
+                String userName = in.nextLine();
+                boolean found = false;
+                for(int x = 0; x < studentList.size(); x++) {
+                    if(studentList.get(x).getName() == userName) {
+                        studentList.get(x).print();
+                        found = true;
+                        //need to continue to see if it works
+                    }
+                    else if(!found) {
+                        System.out.println("Looks like " + userName + " couldn't be found.");
+                        break;
+                    }
+                }
+            }
+            else if(inp == 2) {
+                System.out.println("Please enter the session ID: \n(This will return the IDs of all of the students who are in this session)");
+                int sessionID = Integer.parseInt(in.nextLine());
+                if(sessionList.get(sessionID).getDoubleSession()) {
+                    System.out.println("Session 1: ");
+                    sessionList.get(sessionID).printStudents();
+                    System.out.println("Session 2: ");
+                    sessionList.get(sessionID).printStudents2();
+                }
+                
+                // need to add a condition for if there is a second version of this session
+            }
+            else {
+                for(Student p : studentList) {
+                    p.print(); //not continuing to the students who didnt fill out form - they are in an unassigned list
+                }
+            } 
         }
+        
 
 
     }
