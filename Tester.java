@@ -1,3 +1,10 @@
+/**
+ * Tester class of the Senior Seminar Program
+ * Scans the files, helps assign each student, and asks for user input
+ * 
+ * @author kailyn0215
+ */
+
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.*;
@@ -223,13 +230,15 @@ public class Tester {
             }
         }
 
+        // instructions for user
         System.out.println("Welcome to Senior Seminar!");
-        while(true) {
+
+        while(true) { // when they r in the program continue
             System.out.println("Would you like to 1- Search by student, 2- Search by Session ID, 3- Print all of the students");
             Scanner in = new Scanner(System.in);
             int inp = Integer.parseInt(in.nextLine());
 
-            if(inp == 1) { // NOT WORKING
+            if(inp == 1) { // NOT WORKING PROPERLY? (been trying to get it to work but there is something wrong w my computer + cant get things to run :( )
                 System.out.println("Please enter the students USERNAME: ");
                 String userName = in.nextLine();
                 boolean found = false;
@@ -237,7 +246,6 @@ public class Tester {
                     if(studentList.get(x).getName() == userName) {
                         studentList.get(x).print();
                         found = true;
-                        //need to continue to see if it works
                     }
                     else if(!found) {
                         System.out.println("Looks like " + userName + " couldn't be found.");
@@ -245,7 +253,7 @@ public class Tester {
                     }
                 }
             }
-            else if(inp == 2) {
+            else if(inp == 2) { // return students in specific sessions
                 System.out.println("Please enter the session ID: \n(This will return the IDs of all of the students who are in this session)");
                 int sessionID = Integer.parseInt(in.nextLine());
                 if(sessionList.get(sessionID).getDoubleSession()) {
@@ -257,7 +265,7 @@ public class Tester {
                 
                 // need to add a condition for if there is a second version of this session
             }
-            else {
+            else { // returns list of students
                 for(Student p : studentList) {
                     p.print(); //not continuing to the students who didnt fill out form - they are in an unassigned list
                 }
